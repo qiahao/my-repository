@@ -1,0 +1,15 @@
+{
+  "presets": [
+    ["env", { "modules": "umd" }],
+    "stage-2",
+    "es2015"
+  ],
+  "plugins": ["transform-runtime","transform-vue-jsx","syntax-dynamic-import"],
+  "comments": false,
+  "env": {
+    "test": {
+      "presets": ["env", "stage-2"],
+      "plugins": [ "istanbul" ]
+    }
+  }
+}
