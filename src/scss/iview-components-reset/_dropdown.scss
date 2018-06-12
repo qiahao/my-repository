@@ -1,0 +1,15 @@
+.ivu-dropdown{
+	&.full-dropdown{
+		display: block;
+		height: 34px;
+		line-height: 34px;
+		.ivu-dropdown-rel{
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+		.ivu-icon-arrow-down-b{
+			float: right;
+			margin-top: 10px;
+		}
+	}
+}

@@ -1,0 +1,44 @@
+@import '../../../scss/helper/_variable.scss';
+
+
+.order-store-detail,
+.order-tracking-detail {
+
+    .tabs-box {
+        overflow: visible;
+    }
+    .car-select {
+        display: inline-block;
+        width: 200px;
+        margin-right: 30px;
+    }
+    .back-type,
+    .back-type-other,
+    .back-nums {
+        display: inline-block;
+    }
+    .back-type-other {
+        input {
+            width: 100px;
+        }
+    }
+    .back-nums {
+        .ivu-input-wrapper {
+            display: inline-block;
+            width: 40px;
+        }
+        input {
+            text-align: center;
+        }
+    }
+    .price-num{
+        display: inline-block;
+        width: 60px;
+    }
+    .price-unit{
+        display: inline-block;
+        width: 70px;
+    }
+    
+}
+

@@ -1,0 +1,36 @@
+$padding-size: 20px;
+$dev-left: 4/24 * 100%; // 分割线所在的位置，
+
+// 物流跟踪 时间轴
+.time-line {
+	position: relative;
+	padding-bottom: 20px;
+    .time-line-time{
+		text-align: right;
+    }
+    .ivu-col{
+    	padding-left: $padding-size;
+        padding-right: $padding-size;
+        word-break: break-all;
+    }
+}
+.time-line > i::before ,
+.time-line > i::after {
+    content: "";
+	position: absolute;
+	left: $dev-left;
+    background: #d8d8d8;
+	
+}
+.time-line > i::before {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    margin-left: -2px;
+    border-radius: 2px;
+}
+.time-line > i::after {
+	width: 1px;
+	top: 8px;
+	bottom: 3px;
+}

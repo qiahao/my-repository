@@ -1,0 +1,64 @@
+.build-order {
+    background: #f9fafc;
+    .title {
+        font-size: 16px;
+        line-height: 32px;
+        color: #4a4a4a
+    }
+
+    .build-main {
+        width: 1115px !important;
+        margin: 15px auto 0 auto;
+        padding: 15px;
+        box-shadow: 2px 2px 1px 0px rgba(0, 0, 0, 0.1);
+        background: #fff
+    }
+
+
+
+    .fee-drop {
+        line-height: 32px;
+        padding: 0 16px;
+        .ivu-icon-arrow-down-b {
+            float: right;
+            margin-top: 10px;
+        }
+    } // customer-component
+    .car-select {
+        display: inline-block;
+        width: 200px;
+        margin-right: 30px;
+    } 
+    // cargo-component
+    .price,
+    .price-unit {
+        float: left;
+        display: inline-block;
+    }
+    .price {
+        width: 60%;
+    }
+    .price-unit {
+        width: 40%;
+    } 
+    // receipt-component
+    .back-type,
+    .back-type-other,
+    .back-nums {
+        display: inline-block;
+    }
+    .back-type-other {
+        input {
+            width: 100px;
+        }
+    }
+    .back-nums {
+        .ivu-input-wrapper {
+            display: inline-block;
+            width: 40px;
+        }
+        input {
+            text-align: center;
+        }
+    }
+}

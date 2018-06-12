@@ -1,0 +1,28 @@
+@import "./common.css";
+.br {
+    border-right: 1px solid #000;
+}
+
+.bl {
+    border-left: 1px solid #000;
+}
+
+.print-layer {}
+
+
+.print-order {
+    width: 23cm;
+    height: 12.7cm;
+    overflow: hidden;
+    background: #f2f2f2 url('/static/images/print-order/print-order-bg.jpg') 0 0 no-repeat;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    /*background-color: #ff0;*/
+}
+
+.inner-wrap {
+    width: 19cm;
+    height: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}

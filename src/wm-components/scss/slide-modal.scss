@@ -1,0 +1,88 @@
+@import '../../scss/helper/_variable.scss';
+	$prefixCls: 'wm-slide-modal';
+
+	$modal-width: 680px;
+	$modal-head-height: 53px;
+	$modal-foot-height: 44px;
+	$padding-default: 20px;
+
+	.#{$prefixCls}{
+		position: fixed;
+		z-index: $zindex-modal;
+		top: $layout-header-height;
+		right: 0;
+		bottom: 0;
+		width: $modal-width;
+		border-left: 1px solid $border-color-base;
+		box-shadow: -1px 0 3px $border-color-base;
+		background: #fff;
+		&.has-head{
+			.#{$prefixCls}-head{
+				display: block;
+			}
+			.#{$prefixCls}-main{
+				padding-top: $modal-head-height;
+			}
+		}
+		&.has-foot{
+			.#{$prefixCls}-foot{
+				display: block;
+			}
+			.#{$prefixCls}-main{
+				padding-bottom: $modal-foot-height;
+			}
+		}
+
+		.tit{
+			font-size:16px;
+		}
+		.wm-icon-close{
+			position: absolute;
+			top: 10px;
+			right: 10px;
+			color: #8492a6;
+			font-size: 30px;
+			cursor: pointer;
+			&:hover{
+				opacity: .7;
+			}
+		}
+	}
+
+	.#{$prefixCls}-head,.#{$prefixCls}-foot{
+		position: absolute;
+		left: 0;
+		right: 0;
+		display: none;
+		padding-left: $padding-default;
+	}
+	
+	.#{$prefixCls}-head{
+		top: 0;
+		height: $modal-head-height;
+		padding-top: 2px;
+		padding-bottom: 1px;
+		padding-right: $modal-head-height - 4;
+		border-bottom: 1px solid $border-default-color;
+		line-height: $modal-head-height - 4px;
+	}
+	.#{$prefixCls}-main{
+		height: 100%;
+		.inner{
+			height: 100%;
+			padding: $padding-default;
+			overflow-x: hidden;
+			overflow-y: auto;
+		}
+	}
+	.#{$prefixCls}-foot{
+		bottom: 0;
+		height: $modal-foot-height;
+		border-top: 1px solid $border-default-color;
+		padding-top: 1px;
+		padding-bottom: 2px;
+		line-height: $modal-head-height - 4;
+	}
+	.fix-modal-main .inner{
+		background: #fbfbfb !important
+	}

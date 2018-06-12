@@ -1,0 +1,53 @@
+.driver-list-content {
+    position: relative;
+    height: 0;
+    z-index: 1000
+}
+
+.driver-search-list {
+    border: 1px solid #e6e6e6;
+    background: #fff;
+    width: 880px;
+    z-index: 4;
+    position: absolute;
+    top: 32px;
+}
+
+.wp25 {
+    width: 25% !important;
+}
+
+.insure-modal-content p {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.insure-modal-content .require-icon {
+    color: #fc6a08;
+    padding-right: 5px;
+}
+
+.blue {
+    color: #0b5bb2
+}
+
+.waybill-detail-main .form-table {
+    background: #fff
+}
+
+.waybill-detail-main .ivu-tabs-bar {
+    border: 1px solid #ddd;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    margin-bottom: 0
+}
+
+.waybill-detail-main .ivu-tabs-content {
+    margin-top: -2px
+}
+
+.small-table td {
+    padding: 8px 0;
+    height: auto;
+    line-height: 20px;
+}

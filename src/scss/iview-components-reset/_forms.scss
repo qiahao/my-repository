@@ -1,0 +1,198 @@
+.ivu-form-item {
+    margin-bottom: 15px;
+}
+
+.form-table {
+    border: 1px solid #d3dce6;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+.form-table-row {
+    display: flex;
+    .form-item:last-child {
+        border-right: none
+    }
+}
+
+.form-item {
+    width: 271.7px;
+    margin: -1px 0 0 -1px;
+    float: left;
+    height: 40px;
+    border-right: 1px solid #d3dce6;
+    border-bottom: 1px solid #d3dce6;
+    padding: 3px 1px 1px 1px;
+    position: relative;
+    bottom: -1px;
+    right: -1px;
+    .ivu-form-item {
+        margin-bottom: 0;
+    }
+    input {
+        border: none;
+        outline: none !important;
+    }
+    .ivu-select-selection {
+        border: none;
+    }
+    input:focus {
+        box-shadow: none
+    }
+    .ivu-select-selection {
+        box-shadow: none
+    }
+    .ivu-form-item-label {
+        padding-right: 0
+    }
+    .checkbox {
+        margin: 7px 0 0 15px;
+    }
+    .ivu-form-item-content {
+        margin-left: 0
+    }
+}
+
+.cragos-list .ivu-form-item-content {
+    margin-left: 0 !important;
+}
+
+.w675 {
+    width: 675px !important;
+}
+
+.w106 {
+    width: 106px !important;
+}
+
+.w900 {
+    width: 900px !important;
+}
+
+.w900 {
+    width: 900px !important;
+}
+
+.w500 {
+    width: 500px !important;
+}
+
+.w361 {
+    width: 362px !important;
+}
+
+@keyframes hideerror {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes showError {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+// 表单验证样式
+// 默认 右边
+.ivu-form-item {
+    .ivu-form-item-error-tip {
+        top: 0;
+        left: 100%;
+        margin-left: 7px;
+        width: 100px;
+        padding: 10px;
+        border-radius: 5px;
+        background: #fc6a08;
+        color: #fff;
+        z-index: 2;
+        line-height: 14px;
+        opacity: 1;
+        animation: hideerror 1s linear .8s forwards;
+        &::before {
+            content: "";
+            position: absolute;
+            right: 100%;
+            display: block;
+            width: 0;
+            height: 0;
+            border: 5px solid transparent;
+            border-right-color: #fc6a08;
+        }
+    }
+    .ivu-form-item-content {
+        &:hover {
+            .ivu-form-item-error-tip {
+                opacity: 1;
+                animation: none;
+            }
+        }
+    }
+}
+
+.error-left {
+    .ivu-form-item {
+        .ivu-form-item-error-tip {
+            left: -120px;
+            
+            &::before {
+                content: "";
+                position: absolute;
+                left: 100%;
+                display: block;
+                width: 0;
+                height: 0;
+                border: 5px solid transparent;
+                border-right-color: #fc6a08;
+                transform: rotate(180deg);
+            }
+        }
+    }
+}
+
+.error-button {
+    .ivu-form-item {
+        margin-bottom: 28px;
+        .ivu-form-item{
+            margin-bottom: 0;
+        }
+        .ivu-form-item-error-tip {
+            left: 0;
+            top: 100%;
+            margin-left: 0;
+            padding: 5px 10px;
+            line-height: 16px;
+            font-size: 12px;
+            width: auto;
+            animation: none;
+            &::before {
+                display: none;
+            }
+        }
+    }
+}
+
+.fade-leave {
+    display: none !important
+}
+
+.fade-leave-active {
+    display: none !important
+}
+
+.fade-leave-to {
+    display: none !important
+}
+
+
+
+// reset input disabled style
+.ivu-input[disabled], fieldset[disabled] .ivu-input{
+    color: #666;
+}

@@ -1,0 +1,76 @@
+// 开单等边框样式
+.row-box{
+	
+	border: 1px solid $border-color-base;
+	border-radius: $border-radius-small;
+	// 纯文本 内部无边框样式
+	&.row-box-auto{
+		.ivu-col{
+			border-right: none;
+			border-bottom: none;
+			word-wrap: break-word;
+			
+		}
+	}
+	&.row-box-text,
+	&.row-box-auto{
+		.ivu-col{
+			height: auto;
+			line-height: 26px;
+			padding: 7px;	
+
+		}
+	}
+	&.row-box-text{
+		.ivu-col{
+			min-height: 41px;
+		}
+	}
+	&.tc,.tc{
+		input{
+			text-align: center;
+		}
+	}
+
+	.ivu-row{
+		border-bottom: 1px solid $border-color-base;
+		margin-bottom: -1px;
+		margin-right: -1px;
+	}
+	.ivu-col{
+		padding: 3px 0;	
+		border-right: 1px solid $border-color-base;
+		border-bottom: 1px solid $border-color-base;
+		margin-bottom: -1px;
+		height: 40px;
+	}
+	.ivu-form-item{
+		margin-bottom: 0;
+		&-label{
+			padding-right: 1px;
+		} 
+	}
+	.ivu-input,
+	.ivu-select-selection{
+		border-color: transparent;
+		box-shadow: none;
+		&:hover,&:focus{
+			box-shadow: none;
+		}
+	}
+	.ivu-form-item-error {
+		.ivu-input,
+		.ivu-select-selection{
+			border-color: $error-color;
+		}
+	}
+}
+.ivu-form-item-error {
+	.row-box{
+		.ivu-input,
+		.ivu-select-selection{
+			border-color: $error-color;
+		}
+	}
+
+}

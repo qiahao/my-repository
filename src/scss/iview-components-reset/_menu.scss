@@ -1,0 +1,75 @@
+$prefix: ivu-menu;
+
+// scss variable
+
+
+$title-background: #324057;
+$title-hover-background: #8492a6;
+$title-hover-color: #c0ccda;
+$title-active-background: #fff;
+$title-active-color: $primary-color;
+$title-color: #eee;
+
+
+$item-hover-background: #8492a6;
+$item-hover-color: #c0ccda;
+$item-active-background: #fff;
+$item-active-color: $primary-color;
+
+// .ivu-menu-dark.ivu-menu-vertical .ivu-menu-item:hover, .ivu-menu-dark.ivu-menu-vertical .ivu-menu-submenu-title:hover
+
+.#{$prefix}-dark{
+    &.#{$prefix}-vertical{
+        .#{$prefix}-submenu-title,
+        .#{$prefix}-item{
+            padding-top: 16px;
+            padding-bottom: 16px;
+            background: $title-background;
+            color: $title-color;
+        }
+
+        .#{$prefix}-submenu-title:hover,
+        .#{$prefix}-item:hover {
+            background: $title-hover-background !important;
+            color: $title-hover-color;
+        }
+
+        .#{$prefix}-item-active:not(.ivu-menu-submenu),
+        .#{$prefix}-item-active:not(.ivu-menu-submenu):hover{
+            border-right: none!important;
+            background: $title-active-background !important;
+            color: $title-active-color;
+        }
+        // .#{$prefix}-opened {
+        //     .#{$prefix}-submenu-title{
+        //         // background: $title-hover-background !important;
+        //         // color: $title-hover-color;
+        //     }
+        // }
+
+        .#{$prefix}-item-active {
+            .#{$prefix}-submenu-title{
+                color: $title-hover-color !important ;
+            }
+        }
+
+        .#{$prefix}-submenu{
+            .#{$prefix}-item{
+                background: #1f2d3d;
+                padding-top: 14px;
+                padding-bottom: 14px;
+            }
+            .#{$prefix}-item:hover{
+                background: $item-hover-background !important;
+                color: $item-hover-color;
+            }
+            .#{$prefix}-item-active,
+            .#{$prefix}-item-active:hover{
+                border-right: none!important;
+                background: #fff !important;
+                color: $item-active-color;
+            }
+        }
+    }
+}
+

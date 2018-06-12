@@ -1,0 +1,72 @@
+@import '../../../scss/helper/_variable.scss';
+// 库存管理
+.order-store {
+    .search-input {
+        display: inline-block;
+        width: 300px;
+    }
+    .order-sign {
+        padding: 10px;
+        background-color: #f6f6f6;
+        line-height: 22px;
+        &>span{
+            margin-right: 10px;
+        }
+    }
+}
+
+// 发布到app
+.order-store-to-app {
+    .time-box {
+        padding-left: 10px;
+        .ivu-form-item {
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .ivu-input-wrapper {
+            display: inline-block;
+            width: 30px;
+            border-bottom: 1px solid $border-color-base;
+            input {
+                padding: 0;
+                text-align: center;
+            }
+        }
+    }
+    .height-auto {
+        height: auto;
+    }
+}
+
+.order-store-vip-driver {
+    .specity-vip-driver-drop {
+        display: block;
+        .ivu-select-dropdown {
+            width: 967px;
+            margin-left: -160px;
+        }
+        .ivu-table {
+            table {
+                min-width: 100%;
+            }
+        }
+        .ivu-table-body {
+            max-height: 300px;
+        }
+    }
+}
+
+.driver-list-content {
+    position: relative;
+    height: 0;
+    z-index: 1000
+}
+
+.driver-search-list {
+    border: 1px solid #e6e6e6;
+    background: #fff;
+    width: 880px;
+    z-index: 4;
+    position: absolute;
+    top: 32px;
+}

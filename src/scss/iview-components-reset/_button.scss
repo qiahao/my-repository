@@ -1,0 +1,17 @@
+$types: (primary:$primary-color ,success:$success-color ,info:$info-color ,warning:$warning-color ,error:$error-color);
+
+@each $type,$color in $types {
+    .btn-#{$type}-clear{
+        &.ivu-btn{
+            background-color: #FFF;
+            color: $color;
+        }
+    }
+}
+
+
+.btn-primary-text{
+    &.ivu-btn-text{
+        color: $primary-color
+    }
+}

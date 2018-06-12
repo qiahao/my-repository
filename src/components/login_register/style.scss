@@ -1,0 +1,27 @@
+.login {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    min-height: 400px;
+    min-width: 700px;
+    background: #fff url('../../assets/login_pic.png') 0 bottom no-repeat;
+    overflow: auto;
+    .login-logo {
+        margin-top: 45px;
+        margin-left: 52px;
+    }
+    .login-form {
+        float: right;
+        margin: 260px 180px 100px 10px;
+        width: 292px;
+        .ivu-input-wrapper {
+            margin: 10px 0 20px;
+        }
+        .ivu-icon {
+            font-size: 18px;
+        }
+    }
+}
+

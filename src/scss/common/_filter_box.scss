@@ -1,0 +1,41 @@
+.filter-box{
+	padding-top: 10px;
+	padding-bottom: 5px;
+	// border-bottom: 1px solid #ddd;
+	background-color: #fff;
+	color: #333;
+	.label-box{
+		display: inline-block;
+		margin-left: 10px;
+		margin-bottom: 5px;
+		label,.label{
+			padding-left: 10px;
+			padding-right: 6px;
+		}
+	}
+	.ivu-input-wrapper,
+	.ivu-select,
+	.ivu-date-picker{
+		display: inline-block;
+		width: 150px;
+	}
+
+	.ivu-date-picker{
+		.ivu-input-wrapper{
+			width: 100%
+		}
+	}
+	.ivu-checkbox-group{
+		display: inline-block;
+		label,.label{
+			padding-left: 2px;
+			padding-right: 2px;
+		}
+	}
+	
+
+	.ivu-btn{
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+}

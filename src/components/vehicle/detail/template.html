@@ -1,0 +1,181 @@
+<div>        
+    <detail-modal v-model="detailShow" @on-detail-close="closeDetail">
+        <div slot="head">
+            <span>{{title}}</span>
+            <div class="fr">
+                <i-button type="primary" @click="saveVehicle" v-if="saveVehicle">保存</i-button>
+            </div>
+        </div>
+        <div slot="default">
+            <Form ref="formVehicle" :model="vehicle" :rules="formRule" :label-width="100">
+                <Row>
+                    <Col span="12">
+                        <Form-item label="车牌号码" prop="truck_plate">
+                            <i-input v-model="vehicle.truck_plate" placeholder="请输入车牌号码" @on-change="getYunbaTruckInfo" @on-blur="transBlur"></i-input>
+                        </Form-item>
+                    </Col>
+                    <Col span="12">
+                        <Form-item label="牌照类型" prop="truck_plate_type">
+                            <Select v-model="vehicle.truck_plate_type">
+                                <Option v-for="item in dict.truckPlateType" :value="item.dict_value" :key="item">{{ item.dict_text }}</Option>
+                            </Select>
+                        </Form-item>
+                    </Col>
+    
+                </Row>
+                <Row>
+                    <Col span="12">
+                        <Form-item label="车长" prop="truck_length">
+                            <Select v-model="vehicle.truck_length">
+                                <Option v-for="item in dict.truckLength" :value="item.dict_value" :key="item">{{ item.dict_text }}</Option>
+                            </Select>
+                        </Form-item>
+                    </Col>
+                    
+                    <Col span="12">
+                        <Form-item label="车架号" prop="truck_frame">
+                            <i-input v-model="vehicle.truck_frame" placeholder="请输入车架号"></i-input>
+                        </Form-item>
+                    </Col>    
+                </Row>
+                
+                <Row>
+                    <Col span="12">
+                        <Form-item label="车型" prop="truck_type">
+                            <Select v-model="vehicle.truck_type">
+                                <Option v-for="item in dict.truckType" :value="item.dict_value" :key="item">{{ item.dict_text }}</Option>
+                            </Select>
+                        </Form-item>
+                    </Col>
+                    <Col span="12">
+                        <Form-item label="载重" prop="truck_weight">
+                            <i-input v-model="vehicle.truck_weight" placeholder="请输入载重"></i-input>
+                        </Form-item>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col span="12">
+                        <Form-item label="容积" prop="truck_cube">
+                            <i-input v-model="vehicle.truck_cube" placeholder="请输入容积"></i-input>
+                        </Form-item>
+                    </Col>
+                    <Col span="12">
+                        <Form-item label="所有人" prop="truck_owner">
+                            <i-input v-model="vehicle.truck_owner" placeholder="请输入所有人或挂靠公司"></i-input>
+                        </Form-item>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col span="12">
+                        <Form-item label="业务类型" prop="truck_catagory">
+                            <Radio-group v-model="vehicle.truck_catagory">
+                                <Radio label="大车(干线)"></Radio>
+                                <Radio label="小车(短驳)"></Radio>
+                            </Radio-group>
+                        </Form-item>
+                    </Col>
+                    <Col span="12">
+                        <Form-item label="合作类型" prop="truck_belong">
+                            <Radio-group v-model="vehicle.truck_belong">
+                                <Radio label="0"><span>自有</span></Radio>
+                                <Radio label="1"><span>外协</span></Radio>
+                            </Radio-group>
+                        </Form-item>
+                    </Col>
+                </Row>
+                
+                <Row>
+                    <Col span="24">
+                        <Form-item label="道路运输证" prop="truck_tranport_permit_no">
+                            <i-input v-model="vehicle.truck_tranport_permit_no" placeholder="请输入道路运输许可证号"></i-input>
+                        </Form-item>
+                    </Col>
+                    
+                </Row>
+                <Row>
+                    <Col span="8">
+                        <Form-item label="营运证照片" prop="truck_operating_lisence">
+                            <img-upload upload-id="truck_operating_lisence" :url-list="vehicle.truck_operating_lisence" @on-remove="removeImg" @on-success="singleUpload"></img-upload>
+                        </Form-item>
+                    </Col>
+                    <Col span="8">
+                        <Form-item label="车辆照片" prop="truck_pics">
+                            <img-upload upload-id="truck_pics" :upload-option="{multiple: true,maxNum:3}" :url-list="truckPics" @on-remove="removeImg" @on-success="multipleUpload"></img-upload>
+                        </Form-item>
+                    </Col>
+                    <Col span="8">
+                        <Form-item label="行驶证照片" prop="truck_drive_lisence">
+                            <img-upload upload-id="truck_drive_lisence" :url-list="vehicle.truck_drive_lisence" @on-remove="removeImg" @on-success="singleUpload"></img-upload>
+                        </Form-item>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col span="12">
+                         <Form-item label="司机姓名" prop="driver_name">
+                            <i-input v-model="vehicle.driver_name" placeholder="请输入司机姓名"></i-input>
+                        </Form-item>
+                    </Col>
+                    <Col span="12">
+                        <Form-item label="联系方式" prop="driver_mobile" >
+                            <i-input v-model="vehicle.driver_mobile" placeholder="请输入联系电话" @on-blur="getYunbaVehicle"></i-input>
+                        </Form-item>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col span="12">
+                        <Form-item label="身份证号" prop="driver_id_no">
+                            <i-input v-model="vehicle.driver_id_no" placeholder="请输入身份证号"></i-input>
+                        </Form-item>
+                    </Col>
+                    <Col span="12">
+                        <Form-item label="性别" prop="driver_sex">
+                            <Radio-group v-model="vehicle.driver_sex">
+                                <Radio label="M"><span>男</span></Radio>
+                                <Radio label="F"><span>女</span></Radio>
+                            </Radio-group>
+                        </Form-item>
+                    </Col>  
+                </Row>
+                <Row>
+                    <Col span="24">
+                        <Form-item label="所有人" prop="driver_company">
+                            <i-input v-model="vehicle.driver_company" placeholder="请输入所属公司或挂靠公司"></i-input>
+                        </Form-item>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col span="24">
+                        <Form-item label="经营许可证" prop="driver_qulification_no">
+                            <i-input v-model="vehicle.driver_qulification_no" placeholder="请输入所属公司或挂靠公司的经营许可证号"></i-input>
+                            注：请让您的司机安装运吧司机版APP，以便能实时接收到您发布的运输任务！手机号即为登陆账号。
+                        </Form-item>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col span="12">
+                        <Form-item label="身份证正面" prop="id_front_pic">
+                            <img-upload upload-id="id_front_pic" :url-list="vehicle.id_front_pic" @on-remove="removeImg" @on-success="singleUpload"></img-upload>
+                        </Form-item>
+                    </Col>
+                    <Col span="12">
+                        <Form-item label="身份证反面" prop="id_back_pic">
+                            <img-upload upload-id="id_back_pic" :url-list="vehicle.id_back_pic" @on-remove="removeImg" @on-success="singleUpload"></img-upload>
+                        </Form-item>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col span="12">
+                        <Form-item label="驾驶证照片" prop="driver_lisence_pic">
+                            <img-upload upload-id="driver_lisence_pic" :url-list="vehicle.driver_lisence_pic" @on-remove="removeImg" @on-success="singleUpload"></img-upload>
+                        </Form-item>
+                    </Col>
+                    <Col span="12">
+                        <Form-item label="头像采集" prop="driver_pic">
+                            <img-upload upload-id="driver_pic" :url-list="vehicle.driver_pic" @on-remove="removeImg" @on-success="singleUpload"></img-upload>
+                        </Form-item>
+                    </Col>
+                </Row>     
+            </Form>
+        </div>
+    </detail-modal>
+</div>

@@ -1,0 +1,49 @@
+// 列表页面 顶部操作
+$padding: 15px;
+$margin: 25px;
+.layout-content {
+    .contain {
+        position: relative;
+        height: 100%;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+    .contain-head {
+        padding: 8px $padding;
+        position: fixed;
+        width: 100%;
+        z-index: 6;
+        padding-right: 220px;
+        background-color: $background-gray-default;
+        .ivu-radio-group {
+            vertical-align: middle;
+        }
+    }
+    .contain-main {
+        margin-left: $margin;
+        margin-right: $margin;
+        padding-top: 70px;
+        padding-bottom: $padding;
+    }
+}
+
+// 分页
+.page-wrapper {
+    position: relative;
+    margin: $margin 0;
+    &::after {
+        content: '';
+        display: table;
+        height: 0;
+        width: 0;
+        clear: right;
+    }
+    .ivu-page {
+        float: right;
+    }
+}
+
+.table-footer-box {
+    margin-top: 20px;
+    margin-bottom: 2px;
+}

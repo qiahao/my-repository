@@ -1,0 +1,31 @@
+.print-content {
+    width: 100%;
+    height: 450px;
+    position: relative;
+    background-size: 79%;
+}
+
+.print-content span {
+    position: absolute;
+    left: 50px;
+    top: 50px;
+    z-index: 2;
+    cursor: pointer;
+    font-size: 12px !important;
+    color: #000 !important;
+}
+
+
+.print-content .j_barcode-s-img {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 520px;
+    top: 27px;
+    text-align: center
+}
+
+.print-content img {
+    width: 100%;
+    height: 100%;
+}

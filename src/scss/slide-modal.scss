@@ -1,0 +1,41 @@
+@import './helper/_variable.scss';
+
+$modal-width: 680px;
+$modal-head-height: 44px;
+$modal-foot-height: 44px;
+$default-padding: 20px;
+.slide-modal{
+	position: fixed;
+	z-index: $zindex-modal;
+	top: $layout-header-height;
+	right: 0;
+	bottom: 0;
+	width: $modal-width;
+	background: #fff;
+	.modal-head,.modal-foot{
+		position: absolute;
+		left: 0;
+		right: 0;
+	}
+	
+	.modal-head{
+		top: 0;
+		height: $modal-head-height;
+		border-bottom: 1px solid $border-default-color;
+	}
+	.modal-main{
+		&.has-head{
+			padding-top: $modal-head-height;
+		}
+		&.has-foot{
+			padding-bottom: $modal-foot-height;
+		}
+		height: 100%;
+		overflow-x: hidden;
+		overflow-y: auto;
+	}
+	.modal-foot{
+		bottom: 0;
+		height: $modal-foot-height;
+	}
+}
