@@ -1,0 +1,144 @@
+image: localhost:5000/docker:latest
+variables:
+  PROJECT_NAME: 'tms-web'
+  EMU_PROJECT_NAME: 'tms-web-emu'
+  SERVICE_PORT: '80'
+  ALIYUN_REG: 'registry.cn-hangzhou.aliyuncs.com'
+  ALIYUN_REG_NAMESPACE: 'registry.cn-hangzhou.aliyuncs.com/tms-cloud'
+  URL_LIVE: 'https://tms.yunba.com'
+  URL_TESTING: 'http://tms-dev.yunba.com'
+  HOST_TESTING: 'tms-vue.yunba.dev,tms-dev.yunba.com'
+  HOST_STAGING: 'tms-staging.yunba.com'
+  URL_STAGING: ''
+  ALIYUN_LIVE_WEBHOOK: ''
+  ALIYUN_STAGING_WEBHOOK: ''
+#  ALIYUN_REG_USER: xxxx
+#  ALIYUN_REG_PASS: xxxx
+
+cache:
+  paths:
+    - dist/
+
+stages:
+  - dev-build
+  - build
+  - docker
+  - deploy
+    
+# 打版本号标签时，生成带版本号的目标代码到 dist 目录
+#build:
+#  stage: build
+#  image: node:alpine
+#  script: 
+#    - npm install
+#    - npm run build
+#  only:
+#    - /^\d+(\.\d+)+$/
+#    - testing
+
+
+vue-compile:
+  image: localhost:5000/vue-build:latest
+  stage: dev-build
+  script:
+    - node -v
+    - npm install -g cnpm --registry=http://192.168.1.231:8081/repository/taobaonpmregistry/
+    - export PHANTOMJS_CDNURL=http://npm.taobao.org/mirrors/phantomjs
+    - export CHROMEDRIVER_CDNURL=http://npm.taobao.org/mirrors/chromedriver
+    - export SASS_BINARY_SITE=http://npm.taobao.org/mirrors/node-sass
+    - cnpm install
+    - npm run build
+  only:
+    - testing
+
+
+.docker: &build-docker
+  stage: docker
+  script:
+    - export IMAGE_TAG=$(echo -en $CI_COMMIT_REF_NAME | tr -c '[:alnum:]_.-' '-')
+    - docker login -u "gitlab-ci-token" -p "$CI_JOB_TOKEN" $CI_REGISTRY
+#    - if $BUILD_LATEST; then docker build -f Dockerfile.prod --pull -t "$CI_REGISTRY_IMAGE:$IMAGE_TAG" -t "$CI_REGISTRY_IMAGE:latest" . ;else docker build -f Dockerfile.test --pull -t "$CI_REGISTRY_IMAGE:$IMAGE_TAG" . ;fi
+    - if [ "$IMAGE_TAG" = "latest" ]; then docker build -f Dockerfile.prod --pull -t "$CI_REGISTRY_IMAGE:$IMAGE_TAG" -t "$CI_REGISTRY_IMAGE:latest" . ; elif [ "$IMAGE_TAG" = "testing" ]; then docker build -f Dockerfile.test --pull -t "$CI_REGISTRY_IMAGE:$IMAGE_TAG" . ; elif [ "$IMAGE_TAG" = "staging" ]; then docker build -f Dockerfile.staging --pull -t "$CI_REGISTRY_IMAGE:$IMAGE_TAG" . ; else docker build -f Dockerfile.prod --pull -t "$CI_REGISTRY_IMAGE:$IMAGE_TAG" . ; fi
+    - docker push "$CI_REGISTRY_IMAGE:$IMAGE_TAG"
+    - if $BUILD_LATEST; then docker push "$CI_REGISTRY_IMAGE:latest"; fi
+    
+build-version-docker:
+  variables:
+    BUILD_LATEST: 'true'
+  <<: *build-docker
+  only:
+    - /^\d+(\.\d+)+$/
+    
+build-testing-docker:
+  variables:
+    BUILD_LATEST: 'false'
+  <<: *build-docker
+  only:
+    - testing
+    - staging    
+build-tagged-docker:
+  image: localhost:5000/docker:git
+  stage: docker
+  script:
+    - export IMAGE_TAG=$(echo -en $CI_COMMIT_REF_NAME | tr -c '[:alnum:]_.-' '-')
+    - export IMAGE_VER_TAG=$(git tag -l --points-at $CI_COMMIT_SHA |grep '[0-9]\{1\}\.\([0-9]\{1\}\)\{1\}')
+    - docker login -u "gitlab-ci-token" -p "$CI_JOB_TOKEN" $CI_REGISTRY
+    - docker tag "$CI_REGISTRY_IMAGE:$IMAGE_VER_TAG" "$CI_REGISTRY_IMAGE:$IMAGE_TAG"
+    - docker push "$CI_REGISTRY_IMAGE:$IMAGE_TAG"
+  only:
+    - live
+
+deploy-testing:
+  stage: deploy
+  script:
+    - chmod 755 ./deploy-testing.sh
+    - ./deploy-testing.sh
+  only:
+    - testing
+  environment:
+    name: testing
+    url: $URL_TESTING
+    
+deploy-staging:
+  stage: deploy
+  script:
+    - chmod 755 ./deploy-staging.sh
+    - ./deploy-staging.sh
+  only:
+    - staging    
+  environment:
+    name: staging
+    url: $URL_TESTING
+    
+.aliyun: &deploy-aliyun
+  stage: deploy
+  script:
+    - export IMAGE_TAG=$(echo -en $CI_COMMIT_REF_NAME | tr -c '[:alnum:]_.-' '-')
+    - docker login -u=$ALIYUN_REG_USER -p $ALIYUN_REG_PASS $ALIYUN_REG
+    - docker tag $CI_REGISTRY_IMAGE:$IMAGE_TAG $ALIYUN_REG_NAMESPACE/$PROJECT_NAME:$IMAGE_TAG
+    - docker push $ALIYUN_REG_NAMESPACE/$PROJECT_NAME:$IMAGE_TAG
+    - echo "http://mirrors.aliyun.com/alpine/v"`cat /etc/os-release | grep PRETTY_NAME| grep -o "\d\.\d"`"/main/" > /etc/apk/repositories
+    - apk update
+    - apk add curl
+    - curl $ALIYUN_WEBHOOK
+  when: manual
+    
+deploy-live:
+  variables:
+    ALIYUN_WEBHOOK: $ALIYUN_LIVE_WEBHOOK
+  <<: *deploy-aliyun
+  environment:
+    name: aliyun-live
+    url: $URL_LIVE
+  only:
+    - live
+    
+#deploy-staging:
+#  variables:
+#    ALIYUN_WEBHOOK: $ALIYUN_STAGING_WEBHOOK
+#  <<: *deploy-aliyun
+#  environment:
+#    name: aliyun-staging
+#    url: $URL_STAGING
+#  only:
+#    - staging
