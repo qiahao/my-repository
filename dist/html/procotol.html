@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>1. 货运险单票方案-</title>
+
+
+<style type="text/css">
+body {
+  font-family: Helvetica, arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  padding: 30px; }
+
+body > *:first-child {
+  margin-top: 0 !important; }
+body > *:last-child {
+  margin-bottom: 0 !important; }
+
+a {
+  color: #4183C4; }
+a.absent {
+  color: #cc0000; }
+a.anchor {
+  display: block;
+  padding-left: 30px;
+  margin-left: -30px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  cursor: text;
+  position: relative; }
+
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA09pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoMTMuMCAyMDEyMDMwNS5tLjQxNSAyMDEyLzAzLzA1OjIxOjAwOjAwKSAgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUM2NjlDQjI4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUM2NjlDQjM4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5QzY2OUNCMDg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5QzY2OUNCMTg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsQhXeAAAABfSURBVHjaYvz//z8DJYCRUgMYQAbAMBQIAvEqkBQWXI6sHqwHiwG70TTBxGaiWwjCTGgOUgJiF1J8wMRAIUA34B4Q76HUBelAfJYSA0CuMIEaRP8wGIkGMA54bgQIMACAmkXJi0hKJQAAAABJRU5ErkJggg==) no-repeat 10px center;
+  text-decoration: none; }
+
+h1 tt, h1 code {
+  font-size: inherit; }
+
+h2 tt, h2 code {
+  font-size: inherit; }
+
+h3 tt, h3 code {
+  font-size: inherit; }
+
+h4 tt, h4 code {
+  font-size: inherit; }
+
+h5 tt, h5 code {
+  font-size: inherit; }
+
+h6 tt, h6 code {
+  font-size: inherit; }
+
+h1 {
+  font-size: 28px;
+  color: black; }
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #cccccc;
+  color: black; }
+
+h3 {
+  font-size: 18px; }
+
+h4 {
+  font-size: 16px; }
+
+h5 {
+  font-size: 14px; }
+
+h6 {
+  color: #777777;
+  font-size: 14px; }
+
+p, blockquote, ul, ol, dl, li, table, pre {
+  margin: 15px 0; }
+
+hr {
+  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x 0 0;
+  border: 0 none;
+  color: #cccccc;
+  height: 4px;
+  padding: 0;
+}
+
+body > h2:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+body > h1:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+  body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0; }
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0; }
+
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+  margin-top: 0; }
+
+li p.first {
+  display: inline-block; }
+li {
+  margin: 0; }
+ul, ol {
+  padding-left: 30px; }
+
+ul :first-child, ol :first-child {
+  margin-top: 0; }
+
+dl {
+  padding: 0; }
+  dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0;
+    margin: 15px 0 5px; }
+    dl dt:first-child {
+      padding: 0; }
+    dl dt > :first-child {
+      margin-top: 0; }
+    dl dt > :last-child {
+      margin-bottom: 0; }
+  dl dd {
+    margin: 0 0 15px;
+    padding: 0 15px; }
+    dl dd > :first-child {
+      margin-top: 0; }
+    dl dd > :last-child {
+      margin-bottom: 0; }
+
+blockquote {
+  border-left: 4px solid #dddddd;
+  padding: 0 15px;
+  color: #777777; }
+  blockquote > :first-child {
+    margin-top: 0; }
+  blockquote > :last-child {
+    margin-bottom: 0; }
+
+table {
+  padding: 0;border-collapse: collapse; }
+  table tr {
+    border-top: 1px solid #cccccc;
+    background-color: white;
+    margin: 0;
+    padding: 0; }
+    table tr:nth-child(2n) {
+      background-color: #f8f8f8; }
+    table tr th {
+      font-weight: bold;
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr td {
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr th :first-child, table tr td :first-child {
+      margin-top: 0; }
+    table tr th :last-child, table tr td :last-child {
+      margin-bottom: 0; }
+
+img {
+  max-width: 100%; }
+
+span.frame {
+  display: block;
+  overflow: hidden; }
+  span.frame > span {
+    border: 1px solid #dddddd;
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin: 13px 0 0;
+    padding: 7px;
+    width: auto; }
+  span.frame span img {
+    display: block;
+    float: left; }
+  span.frame span span {
+    clear: both;
+    color: #333333;
+    display: block;
+    padding: 5px 0 0; }
+span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-center > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: center; }
+  span.align-center span img {
+    margin: 0 auto;
+    text-align: center; }
+span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px 0 0;
+    text-align: right; }
+  span.align-right span img {
+    margin: 0;
+    text-align: right; }
+span.float-left {
+  display: block;
+  margin-right: 13px;
+  overflow: hidden;
+  float: left; }
+  span.float-left span {
+    margin: 13px 0 0; }
+span.float-right {
+  display: block;
+  margin-left: 13px;
+  overflow: hidden;
+  float: right; }
+  span.float-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: right; }
+
+code, tt {
+  margin: 0 2px;
+  padding: 0 5px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px; }
+
+pre code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent; }
+
+.highlight pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+  pre code, pre tt {
+    background-color: transparent;
+    border: none; }
+
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:0 auto;
+    }
+}
+@media print {
+	table, pre {
+		page-break-inside: avoid;
+	}
+	pre {
+		word-wrap: break-word;
+	}
+}
+</style>
+
+
+</head>
+
+<body>
+
+<h3 align=center> 货运险单保险条约</h3>
+
+<p><strong>投保人</strong> : 合作平台</p>
+
+<p><strong>被保险人</strong> : 实际货主 </p>
+
+<p><strong>保险期间</strong> : 共12个月</p>
+
+<ul>
+<li>当事人任何一方于30天前以书面通知的方式提出解约。解约自向保险公 司发出或由保险公司发出书面解约通知的第二天零时起满30天时开始生 效。但是，对解约生效前，风险已开始的船载货物无效。</li>
+</ul>
+
+<p><strong>保险标的</strong> : 普通货物</p>
+
+<ul>
+<li><p>易碎品(各种玻璃、陶瓷、搪瓷制品，大理石等以及主要由上述材质制
+      成的货物，包括液晶屏、瓶装货物)。</p></li>
+<li><p>普通货物不包含以下物品:</p>
+
+<ol>
+<li><p>金银、金银制品、纪念币、珠宝、钻石、玉器、贵重金属、首饰、古币、古玩、古书、古画、邮票、艺术品、稀有金属、文物、古董、现金、有价证券、票据、文件、档案、账册、图纸、技术资料、玉雕工艺品、玉石制品、名画、古代化石、瓷器、旧地毯、各类工艺品等其他价值无法确定或者保险期间内价值变化较大的货物;</p></li>
+<li><p>鱼粉、豆粕、易腐易蛀品、农产品(各类散货果仁、花生、大豆等 谷物、粮食作物、菜籽饼、地瓜干、木薯干、蔬菜类等);</p></li>
+<li><p>易变质品(包括海货、鲜活货等)、易腐坏及受温度影响的物品， 如冷冻品、肉类、蛋类、水果类等;</p></li>
+<li><p>动植物及畜产品、血制品、疫苗;</p></li>
+<li><p>爆炸品、放射性同位素、易燃、易爆的危险品(一般化工类产品不列入危险品，如桶装的油漆、燃料、农药、炭黑、清洁剂、机油、香精、香料、电池、电瓶、油墨、胶水、树脂等)、军用武器或装备、酒精、汽油、煤油、柴油、火柴;</p></li>
+<li><p>汽车、摩托车，船舶，飞机，游艇，风力发电相关设备及叶片;</p></li>
+<li><p>原木(陆运原木除外)、原棉、天然橡胶、木材、红木家具等;</p></li>
+<li><p>单价超过RMB1万元的手表;</p></li>
+<li><p>超宽或超高货物;</p></li>
+<li><p>医疗设备(单价超过50万); </p></li>
+<li><p>有防震防倾斜要求的精密设备(如液晶、半导体、光伏生产设备 等)。精密仪器或设备(任何仪器或设备如果满足以下条件之一， 应视为精密仪器或设备:a)运输过程中对该仪器或设备的平衡、 稳定、防震、防尘、搬运倾斜角度等有特殊严格要求;b)仪器或设 备受损后无法找到配件，必须运回国外原厂修理或无法修复;c)单 件仪器或设备货值超过人民币200万元。</p></li>
+<li><p>重大件机械设备(任何机机械设备如果满足以下条件之一，应视为 重大件机械设备:a)任一部件由于体积或重量的原因必须由特殊 运输工具运输;b)任一部件由于本身的特性必须特殊处理，如要求 特殊的绑扎固定及保持重心的平衡)。</p></li>
+<li><p>散装化工类货物，如煤炭;矿石/砂;镍矿;石油及柴油、沥青、焦 油等各类石油提炼品、饲料、化肥、水泥等</p></li>
+<li><p>太阳能组件、半导体、晶硅片(单晶硅、多晶硅)</p></li>
+</ol></li>
+<li><p>在任何情况下，保险人不对被保险人承运的“不承保货物”的损失进行认 定和赔付，也不对“不承保货物”造成的其他货物的损失进行认定和赔付。</p></li>
+</ul>
+
+<p><strong>航程</strong> : 全国各地(香港、澳门、中国台湾除外)</p>
+
+<p><strong>包装方式</strong>： 纸箱/木箱/托盘/金属类包装箱/塑料类包装箱，标准商用包装，裸装货物。<strong>裸装货物表面生锈、氧化、退色、刮擦、凹陷的风险除外，不属于 保险责任。</strong></p>
+
+<ul>
+<li>投保人/被保险人保证:采用的包装必须是完全符合国家、行业标准及长 途运输条件的专业化的包装配载条件，否则保险人不承担保险责任。</li>
+</ul>
+
+<p><strong>运输工具</strong> : 符合国家相关标准的营业性卡车、货车。</p>
+
+<p><strong>责任起讫</strong> : 自签发保险凭证和保险货物运离起运地发货人的最后一个仓库或储存处所时起，至该保险凭证上注明的目的地的收货人在当地的第一个仓库或储存处所时终止。</p>
+
+<p><strong>责任限额</strong> :</p>
+
+<ul>
+<li>普通货物:RMB 500万元/每一运输工具;</li>
+<li>易碎品:RMB 50万元/每一运输工具;</li>
+<li>盗窃、抢劫:RMB 30万/每一运输工具，手机，便携式电脑，相机盗抢 损失的每次(每车)赔偿限额不超过每一方案的最高赔偿限额，但是， 无论如何不得高于10万元。</li>
+</ul>
+
+<p><strong>保险金额的确定</strong> :</p>
+
+<ul>
+<li>国内运输:按货价</li>
+<li>理赔时，须提供相应单证支持。</li>
+</ul>
+
+<p><strong>免赔额(率)</strong> :</p>
+
+<p><strong>1.普通货物(非火灾爆炸、翻车事故):每次事故绝对免赔:RMB1,000 元或损失金额的10%，两者以高者为准。</strong></p>
+
+<p><strong>2.易碎品:每次事故绝对免赔:RMB1,000或损失金额的20%，两者以高 者为准。</strong></p>
+
+<p><strong>3.发生火灾、爆炸、翻车事故:每次事故绝对免赔:RMB1,000元或损失 金额的20%，两者以高者为准。</strong></p>
+
+<p><strong>4.水果蔬菜、冷藏冷冻品:每次事故绝对免赔:RMB1,000或损失金额的 20%，两者以高者为准。</strong></p>
+
+<p><strong>5.附加盗窃、抢劫责任:每次事故绝对免赔:RMB1,000元或损失金额的 20%，两者以高者为准/每次事故。</strong></p>
+
+<p><strong>保险费率：</strong></p>
+
+<ul>
+<li><p>普通货物:</p>
+
+<ol>
+<li>基本险:0.015%; </li>
+<li>综合险:0.02%;</li>
+<li>综合险(附加盗窃、抢劫):0.025%</li>
+</ol></li>
+<li><p>水果蔬菜:基本险0.03%; </p></li>
+<li><p>冷藏冷冻品:基本险0.035%</p></li>
+<li><p>最低保费:10元/每一运单; </p></li>
+</ul>
+
+<p><code>备注:客户需足额选择相应的保险金额，否则出险时保险人将根据每一 运输工具每次赔偿限额与货物实际价值的比例承担保险事故赔偿责任。</code></p>
+
+<p><strong>适用条款</strong>： 
+<strong>国内水路、陆路货物运输保险条款(基本险/综合险)</strong> </p>
+
+<p><strong>国内货运险附加盗窃、抢劫保险条款</strong></p>
+
+<p><strong>权益转让 :</strong></p>
+
+<ol>
+<li>一旦发生责任范围内的损失，投保人/被保险人须按本保险单或保险 条款规定的时间内通知保险人，同时积极施救，力争避免和减少损 失的扩大。</li>
+<li>货物发生保险责任范围内的损失，应当由承运人或其他第三者负责 赔偿部分或全部的，投保人/被保险人应首先向承运人或其他第三者 索赔。投保人/被保险人应签发权益转让书给保险人，并协助保险人 向责任方追偿。如投保人/被保险人擅自放弃或减损此项权益，保险 人有权拒绝承担赔偿责任或对赔偿金作相应扣减。</li>
+</ol>
+
+<p><strong>除外责任：</strong></p>
+
+<ol>
+<li>非承保原因导致的被保险货物的生锈、氧化、褪色的风险除外 </li>
+<li>非承保原因导致的被保险货物的机械、电子和电器工作紊乱除外</li>
+<li>被保货物在无人看管的情况下发生的损失除外。 </li>
+<li>被保货物的神秘失踪的风险除外。</li>
+</ol>
+
+<p><strong>特别约定 :</strong></p>
+
+<ol>
+<li>如保险标的已由其实际所有人在其他保险公司投保货物运输保险，则 本保单依然有效，但本保单的赔偿以本保单的保障范围及被保险人依法 应承担的赔偿责任(包括追偿责任)为限。 </li>
+<li>放弃对每单平台投保会员的代位追偿权,但保留对其他实际承运人的代 位追偿权。</li>
+<li>本保单不承保整车货物被盗、抢掠或失踪之风险。</li>
+<li>盗窃、抢劫案件的保单责任认定，必须以警方出具的立案证明及未破 案证明为前提。</li>
+<li>本保险不负责货物短少的损失，除非该短少是由于不可抗力或运输工 具发生意外事故造成的。</li>
+<li>水路运输所使用船舶船龄不超过15年，且须有效运输资质;若不符合 水路运输要求的或船龄超过15年的，无论发生任何事故，保险人不承担 保险责任。</li>
+<li>本协议项下保单为系统自动传输相关承保货物，保险公司无法通过系 统校验货物名称是否属于不保货物，无论投保人在数据传输时是否包括 不保货物，在被保险人申请保险理赔时，如果该货物属于除外货物，保 险公司均有权不承担保险责任。</li>
+<li>本协议的基础条件是系统平台对接投保，投保人开放其内部管理系统 端又，配合保险人实时获取与本保险单相关数据，保险人可以随时通过 保险平台端又以及能够真实反映运输实际情况等有关材料审核。</li>
+<li>废旧品、二手品、展览后之展品和陈列品仅承保火灾爆灾、交通工具 发生意外事故造成的损失。裸装品不负责锈损和刮擦导致的损失; </li>
+<li>药品类(疫苗除外)货物发生损失时，本保单只负责赔偿受损货物及 包装的直接损失(如外包装破损，但内包装完好，本保单仅就受损的外 包装承担赔偿责任;如部分货物受损，本保单只负责受损货物的直接损 失)，不承担由此产生的整箱货物被拒收或无法销售带来的损失以及其 它间接损失。</li>
+<li>被保险人不是实际承运人的情况下，被保险人必须将有关业务委托给 有资质的并具备合格驾驶证、行驶证、营运证的专业承运进行人运输， 否则保险人不负责赔偿造成的任何损失、费用和责任。</li>
+<li>手机，便携式电脑，相机盗抢损失的每次(每车)赔偿限额不超过每 一方案的最高赔偿限额，但是，无论如何不得高于10万元。</li>
+<li><p><strong>本保单扩展承保水果蔬菜、冷藏冷冻品，仅承保国内水路、陆路货运 险(基本险)。</strong></p>
+
+<p><strong>经双方友好协商，特制定本特别约定;保险合同其他部分与本特别
+约定相抵触之处，以本特别约定为准;本特别约定未尽之处，以保险合
+同其他部分为准。</strong></p></li>
+</ol>
+
+<p><strong>保证条款 :</strong> 投保人/被保险人保证:</p>
+
+<ol>
+<li>投保人保证保险标的必须由专业承运人进行专业化包装并负责运输。</li>
+<li>投保人保证被保货物的运输应当遵守国内相关职能部门关于安全运
+输的各项规定，否则保险人不承担保险责任。</li>
+<li>投保人保证保险标的须由接受其委托或转委托的具有国家机关认定
+资质的承运人承运，否则保险人不承担保险责任。</li>
+<li>内陆运输:保证被保货物需使用集装箱卡车或全封闭的箱式货车进 行运输或者使用雨布全部覆盖并用绳索有效地扎紧的能适用于长途
+运输的卡车进行装运。</li>
+<li>如损失涉及第三者责任方，投保人/被保险人应配合保险人向第三者
+责任方追偿，投保人/被保险人不得擅自放弃或减损此项权益。保险 人未赔偿保险金之前，被保险人放弃对有关责任方请求赔偿的权利 的，保险人不承担赔偿责任;保险人赔偿保险金之后，被保险人放 弃对有关责任方请求赔偿的权利的，保险人有权向被保险人追回已 付赔付金。</li>
+<li>被保险人不是实际承运人的情况下，被保险人必须将与关业务委托 给有资质的并具有合格驾驶证、行驶证、营运证的专业承运人进行 运输，否则保险人不负责赔偿造成的任何损失、费用和责任。</li>
+</ol>
+
+<p><strong>投保人或被保险人须严格履行本预约保险单中所有保证义务，否则，保
+险人有权对相关业务予以拒保或对相关赔案予以拒赔。</strong></p>
+
+<p><strong>司法管辖：</strong>  用中华人民共和国法律，司法管辖中国(香港、澳门、台湾除外)。</p>
+
+<p><strong>保费支付 :</strong></p>
+
+<ul>
+<li>通过众安收银台实时支付保险费。</li>
+<li>投保人应按照约定向保险人支付已生效保险单保费，如逾期未能全额缴纳，一单发生赔案事故，保险人不承担保险责任。</li>
+</ul>
+
+<p><strong>损失通知：</strong></p>
+
+<ul>
+<li>货物如果发生保险责任范围内的损失时，投保人获悉后，应于48小时内 通知保险人并应迅速采取施救和保护措施防止或减少货物损失。 故意或者因重大过失未及时通知，致使保险事故的性质、原因、损失程 度等难以确定的，保险人对无法确定的部分，不承担赔偿责任，但保险 人通过其他途径已经及时知道或者应当及时知道保险事故发生的除外。</li>
+</ul>
+
+<p><strong>申报条款 :</strong></p>
+
+<ol>
+<li>保险人对每一运输工具的每次运输所载的保险标的负责的最高赔偿 限额不超过约定的赔偿限额，如货物实际金额超过约定赔偿限额，则保 险人只按照每一运输工具每次赔偿限额与货物实际价值的比例承担保险
+事故赔偿责任，其余货损均由投保人/被保险人自行承担。</li>
+<li>投保人/被保险人应本着最大诚信的原则，按本预约保险单之规定， 于起运前将每一票符合要求的货物向保险人悉数投保。</li>
+</ol>
+
+<p><strong>特别说明 :</strong></p>
+
+<ol>
+<li>本协议的基础和条件是:被保险人有义务、无遗漏地将协议范围内
+的货物全部向保险公司申报，保险公司有义务对协议范围内的货物
+接受承保并承担相应的保险责任。</li>
+<li>依据本预约协议所签发的每张保单或保险凭证，除保险公司特别承 诺外，均适用本预约协议所规定的全部条款。</li>
+<li>投保人/被保险人在此确认，保险人已就本协议及保险条款的内容 (特别是保险人免除责任的部分)向被保险人做了明确说明。</li>
+</ol>
+
+<p><strong>【保险理赔和服务】</strong></p>
+
+<ul>
+<li>索赔人可通过甲方线上平台入又发起报案。索赔人发起报案时应提供以下信息
+
+<ol>
+<li>承保资料(保单、批单、保险协议、投保清单等)，或投保成功的短信或邮件回复。</li>
+<li>证件资料(运输车辆行驶证、驾驶证、营运证等)</li>
+<li>运输资料(提单、运单、装箱单、运输协议等)</li>
+<li>事故证明(航空事故签证/理货报告/签收单/货运记录/交通事故责任认定书/海事报告/消防证明/盗窃证明/现场照片)</li>
+<li>损失证明资料(货物买卖合同及发票、检验/检测报告、修理清单/发票等)</li>
+<li>其他材料(出险通知书/赔付协议及权益转让书/损失清单/撤案声明)</li>
+</ol></li>
+<li>甲方接受到上述相关资料后，作初步审核，确认索赔事实的，将索赔信息传输给乙方，经乙方确认后甲方需要和索赔人签署在线赔偿协议，双方确认责任划分和赔付金额。</li>
+<li>乙方在收到甲方材料齐全后，应在五个工作日内进行理赔结案，并在三个工作日付款给索赔人;</li>
+<li>甲方同意乙方可直接向索赔方进行赔偿的确认。</li>
+</ul>
+
+<p><br></br></p>
+
+<p><br></br></p>
+
+<p><br></br></p>
+
+<p><h3 align=center  >众安在线财产保险股份有限公司
+<h3 align=center  >国内水路、陆路货物运输保险条款</p>
+
+<h5 align=center  >总则</h5>
+
+<p><strong>第一条</strong> 为使保险货物在水路、铁路、公路和联运运输中，因遭受保险责任范围内的自然灾害或意外事故所造成的损失能够得到经济补偿，并加强货物的安全防损工作，以利商品生产和商品流通，特举办本保险。   </p>
+
+<h5 align=center  >保险责任</h5>
+
+<p><strong>第二条</strong> 本保险分为基本险和综合险两种。保险货物遭受损失时，保险 按承保险别的责任范围负赔偿责任。 </p>
+
+<p>(一)基本险:</p>
+
+<ol>
+<li>因火灾、爆炸、雷电、冰雹、暴风、暴雨、洪水、地震、海啸、地陷、崖崩、滑坡、泥石流所造成的损失；</li>
+<li>由于运输工具发生碰撞、搁浅、触礁、倾覆、沉没、出轨或隧道、码头坍塌所造成的损失；</li>
+<li>在装货、卸货或转载时因遭受不属于包装质量不善或装卸人员违反操作规程所造成的损失；</li>
+<li>按国家规定或一般惯例应分摊的共同海损的费用;</li>
+<li>在发生上述灾害、事故时，因纷乱而造成货物的散失及因施救或保护货物所支付的直接合理的费用。</li>
+</ol>
+
+<p>(二)综合险: 本保险除包括基本险责任外，保险 还负责赔偿: </p>
+
+<ol>
+<li>因受震动、碰撞、挤压 造成货物破碎、弯曲、凹瘪、折断、开裂或包装破裂致使货物散失的损失;</li>
+<li>液体货物因受震动、碰撞或挤压致使所用容器(包括封口)损坏而渗漏的损失，或用液体保藏的货物因液体渗漏而造成保藏货物腐烂变质的损失; </li>
+<li>遭受盗窃或整件提货不着的损失;</li>
+<li>符合安全运输规定而遭受雨淋所致的损失。</li>
+</ol>
+
+<h5 align=center  >除外责任</h5>
+
+<p><strong>第三条   由于下列原因造成保险货物的损失，保险人不负赔偿责任:</strong></p>
+
+<ol>
+<li><strong>战争或军事行动;</strong></li>
+<li><strong>核事件或核爆炸;</strong></li>
+<li><strong>保险货物本身的缺陷或自然损耗，以及由于包装不善;</strong></li>
+<li><strong>被保险人的故意行为或过失;</strong></li>
+<li><strong>全程是公路货物运输的，盗窃和整件提货不着的损失;</strong></li>
+<li><p><strong>其他不属于保险责任范围内的损失。</strong></p>
+
+<h5 align=center  >责任起迄</h5></li>
+</ol>
+
+<p><strong>第四条</strong> 保险责任自签发保险凭证和保险货物离起运地发货人的最后一个仓库或储运处所时起，至该保险凭证上注明的目的地的收货人在当地的第一个仓库或储存处所时终止。但保险货物运抵目的地后，如果收货人未及时提货，则保险责任的终止期最多延长至以收货人接到《到货通知单》后的十五天为限（以邮戳日期为准）。</p>
+
+<h5 align=center  >保险金额</h5>
+
+<p><strong>第五条</strong> 保险价值为货物的实际价值，按货物的实际价值或货物的实际价值加运杂费确定。保险金额由投保人参照保险价值自行确定，并在保险合同中载明。保险金额不得超过保险价值。超过保险价值的，超过部分无效，保险人应当退还相应的保险费。</p>
+
+<h5 align=center  >投保人、被保险人的义务</h5>
+
+<p><strong>第六条</strong> 投保人应履行如实告知义务，如实回答保险人就保险标的或被保险人的有关情况提出的询问。</p>
+
+<p>投保人故意或者因重大过失未履行前款规定的如实告知义务，足以影响保险人决定是否同意承保或者提高保险费率的，保险人有权解除合同。保险合同自保险人的解约通知书到达投保人或被保险人时解除。</p>
+
+<p>**投保人故意不履行如实告知义务的，保险人对于保险合同解除前发生的保险事故，不承担赔偿责任，并不退还保险费。 **</p>
+
+<p><strong>投保人因重大过失未履行如实告知义务，对保险事故的发生有严重影响的，保险人对于保险合同解除前发生的保险事故，不承担赔偿责任，但应当退还保险费。</strong></p>
+
+<p><strong>第七条</strong>   投保人在保险人签发保险凭证的同时，应按照保险费率，一次性交清应付的保险费。若投保人未按照约定交付保险费，保险费交付前发生的保险事故，保险人不承担赔偿责任。</p>
+
+<p><strong>第八条</strong>   被保险人应严格遵守国家及交通运输部门关于安全运输的各项规定。还应当接受并协助保险人对保险货物进行的查验防损工作，货物包装必须符合国家和主管部门规定的标准。**对于因被保险人未遵守上述约定而导致保险事故的，保险人不负赔偿责任；对于因被保险人未遵守上述约定而导致损失扩大的，保险人对扩大的损失不负赔偿责任。 **</p>
+
+<p><strong>第九条</strong>  货物如果发生保险责任范围内的损失时，被保险人获悉后，应立即通知保险人，并应迅速采取施救和保护措施防止或减少货物损失。</p>
+
+<p><strong>故意或者因重大过失未及时通知，致使保险事故的性质、原因、损失程度等难以确定的，保险人对无法确定的部分，不承担赔偿责任，但保险人通过其他途径已经及时知道或者应当及时知道保险事故发生的除外。</strong></p>
+
+<h5 align=center  >赔偿处理</h5>
+
+<p><strong>第十条</strong>  被保险人向保险人申请索赔时，必须提供下列有关单证：</p>
+
+<ol>
+<li>保险凭证、运单（货票）、提货单、发货票；</li>
+<li>承运部门签发的货运记录、普通记录、交接验收记录、鉴定书；</li>
+<li>收货单位的入库记录、检验报告、损失清单及救护货物所支付的直接费用的单据。</li>
+</ol>
+
+<p>收到被保险人的赔偿请求后，保险人应当及时就是否属于保险责任作出核定，并将核定结果通知被保险人。情形复杂的，保险人在收到被保险人的赔偿请求并提供理赔所需资料后三十日内未能核定保险责任的，保险人与被保险人根据实际情形商议合理期间，保险人在商定的期间内作出核定结果并通知被保险人。对属于保险责任的，在与被保险人达成有关赔偿金额的协议后十日内，履行赔偿义务。</p>
+
+<p><strong>第十一条</strong>  货物发生保险责任范围内的损失时，按货价确定保险金额的，保险人根据实际损失按起运地货价计算赔偿；按货价加运杂费确定保险金额的，保险人根据实际损失按起运地货价加运杂费计算。但最高赔偿金额以保险金额为限。</p>
+
+<p><strong>第十二条</strong>  如果被保险人投保不足，保险金额低于货价时，保险人对其损失金额及支付的施救保护费用按保险金额与货价的比例计算赔偿。保险人对货物损失的赔偿金额，以及因施救或保护货物所支付的直接、合理的费用，应分别计算，并各以不超过保险金额为限。</p>
+
+<p><strong>第十三条</strong>  货物发生保险责任范围内的损失，如果根据法律规定或者有关约定，应当由承运人或其他第三者负责赔偿部分或全部的，被保险人应首先向承运人或其他第三者索赔。如被保险人提出要求，保险人也可以先予赔偿，但被保险人应签发权益转让书给保险人，并协助保险人向责任方追偿。</p>
+
+<p><strong>第十四条</strong>  经双方协商同意，保险人可将其享有的保险财产残余部分的权益作价折归被保险人，并可在保险赔偿金中直接扣除。</p>
+
+<p><strong>第十五条</strong>  因履行本保险合同发生的争议，由当事人协商解决。协商不成的，提交保险单载明的仲裁机构仲裁；保险单未载明仲裁机构且争议发生后未达成仲裁协议的，依法向人民法院起诉。</p>
+
+<p><strong>第十六条</strong>  本保险合同适用中华人民共和国法律(不包括香港、澳门、台湾地区法律）。</p>
+
+<div><pre><code class="language-none">            众安在线财产保险股份有限公司
+           国内货运险附加盗窃、抢劫保险条款</code></pre></div>
+
+<h5 align=center  >第一条 保险责任</h5>
+
+<p>保险人对保险货物在保险期间内由于外来的有明显盗窃、抢劫、哄抢痕迹并经公安部门证明确系盗窃、抢劫、哄抢行为以及全车被他人诈骗所致的直接经济损失承担赔偿责任。</p>
+
+<h5 align=center  >第二条 责任起迄</h5>
+
+<p>在保险合同有效期内，每次运输的保险责任起讫期为保险货物自运离保险凭证（保险单）上载明的起运地时起，至运抵保险凭证（保险单）载明的目的地卸离运输工具时止。但保险货物运抵目的地后，如果收货人未及时卸货，则保险责任的终止期从抵达目的地当日零时起计算最多延长48小时。</p>
+
+<h5 align=center  >第三条 责任免除</h5>
+
+<p>下列原因造成保险货物的损失，保险人不负赔偿责任：</p>
+
+<ol>
+<li><strong>保险货物被政府有关部门征用、罚没、扣押；</strong></li>
+<li><strong>被保险人或驾驶员与他人发生民事纠纷；</strong></li>
+<li><strong>投保人或被保险人的故意行为、违法犯罪行为；</strong></li>
+<li><strong>其他不属于保险责任范围的原因。</strong></li>
+</ol>
+
+<h5 align=center  >第四条 投保人或被保险人的义务</h5>
+
+<ol>
+<li>投保人或被保险人获知或应当获知保险货物发生保险责任范围内的损失后，应立即向当地公安部门报案，并同时通知保险人。<strong>故意或者因重大过失未及时通知，致使保险事故的性质、原因、损失程度等难以确定的，保险人对无法确定的部分，不承担赔偿责任，但保险人通过其他途径已经及时知道或者应当及时知道保险事故发生的除外。</strong></li>
+<li><strong>当货物发生损失时，投保人或被保险人应采取积极有效措施制止货物损失进一步扩大，否则保险人就损失扩大部分不负赔偿责任。</strong></li>
+</ol>
+
+<h5 align=center  >第五条 赔偿处理</h5>
+
+<ol>
+<li><strong>被保险人向保险人索赔时，须提供出险地公安部门出具的证明；全车被骗的，须提供出险地县级以上（含县级）公安刑侦部门出具的证明。否则，保险人有权对部分或全部经济损失不负赔偿责任。</strong></li>
+<li>本附加险责任范围内的盗窃、抢劫、哄抢所造成的保险货物的直接经济损失，在被保险人报案30天后未能侦破，并由被保险人出具盗窃、抢劫、哄抢事故报告、损失清单、公安部门的证明材料及被保险人所能提供的其他与确认保险事故的性质、原因、损失程度等有关的证明和资料后，保险人给予赔偿。全车被骗所致保险货物的直接经济损失，须经县级以上（含县级）公安刑侦部门立案满三个月未能侦破，被保险人出具公安部门的证明材料及保险人认为必要的其他单证后保险人给予赔偿。</li>
+<li>经公安部门破案被追回的保险货物，双方应当协商处理。</li>
+<li>保险货物发生保险责任范围内的损失时，赔偿按主险条款赔偿处理的有关规定计算赔偿金额。<strong>被盗、被抢货物的赔偿均实行20%的绝对免赔，全车被骗的赔偿实行30%的绝对免赔。</strong></li>
+</ol>
+
+<h5 align=center  >第六条 其他事项</h5>
+
+<p>本条款为国内货运险类的附加条款。主险条款与上述条款相抵触之处，以本条款为准，其他未尽事项以主险条款为准。</p>
+
+
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+<template  lang="html">
+	<div class="page-content">
+		<Form ref="insureData" :model="insureData" :rules="ruleValidate" :label-width="80">
+			<div class="page-section">
+				<p>选择险种</p>
+				<div  class="page-list">
+					<Form-item label="选择险种" prop="product_type">
+						<Select v-model="insureData.product_type"  style="width:420px">
+							<Option value="1">普通货物综合险</Option>
+							<Option value="2">普通货物基本险</Option>
+							<Option value="3">普通货物综合险（不含盗抢）</Option>
+							<Option value="6">冷藏基本险</Option>
+							<Option value="6">生鲜果蔬基本险</Option>
+						</Select>
+					</Form-item>
+				</div>
+			</div>
+			<div class="page-section">
+				<p>基础信息</p>
+				<div  class="page-list">
+					<Row>
+						<Col span="10" class="pt5">
+							<label  class="label-control">选择险种<span>*</span></label>
+							<Radio-group v-model="insureData.holder_type">
+								<Radio label="100" >
+									<span>公司</span>
+								</Radio>
+								<Radio label="201">
+									<span>个人</span>
+								</Radio>
+							</Radio-group>
+						</Col>
+						<Col span="14">
+							<Row>
+								<Col span="5" class="text-right  pt5">
+									<label  class="label-control">投保公司名称<span>*</span></label>
+								</Col>
+								<Col span="19">
+									<Input v-model="insureData.holder_name" placeholder="请输入公司名称" style="width: 420px"></Input>
+								</Col>
+							</Row>
+						</Col>
+					</Row>
+				</div>
+				<div  class="page-list">
+					<Row>
+						<Col span="10">
+							<label  class="label-control">投保联系人姓名<span>*</span></label>
+							<Input v-model="insureData.holder_link_name" placeholder="请输入投保联系人姓名" style="width: 220px"></Input>
+						</Col>
+						<Col span="14">
+							<Row>
+								<Col span="5" class="text-right  pt5">
+									<label  class="label-control">联系方式<span>*</span></label>
+								</Col>
+								<Col span="19">
+									<Input v-model="insureData.holder_tel" placeholder="请输入联系电话" style="width: 220px"></Input>
+								</Col>
+							</Row>
+						</Col>
+					</Row>
+				</div>
+				<div  class="page-list">
+					<Row>
+						<Col span="10"  class="pt5">
+							<label  class="label-control">被投险人类型<span>*</span></label>
+							<Radio-group v-model="insureData.insure_type">
+								<Radio label="100" >
+									<span>公司</span>
+								</Radio>
+								<Radio label="201">
+									<span>个人</span>
+								</Radio>
+							</Radio-group>
+						</Col>
+						<Col span="14">
+							<Row>
+								<Col span="5" class="text-right pt5">
+									<label  class="label-control">被保险人名称<span>*</span></label>
+								</Col>
+								<Col span="19">
+									<Input v-model="insureData.insure_name" placeholder="请输入实际货主名称" style="width: 220px"></Input>
+								</Col>
+							</Row>
+						</Col>
+					</Row>
+				</div>
+			</div>
+			<div class="page-section">
+				<p>货物信息</p>
+				<div  class="page-list">
+					<Row>
+						<Col span="8">
+							<label  class="label-control">单证信息<span>*</span></label>
+							<Input v-model="insureData.source_order_no" placeholder="请输入发票号/提单号/运单号" style="width: 220px"></Input>
+						</Col>
+						<Col span="8">
+							<label  class="label-control">起运地<span>*</span></label>
+							<Input v-model="insureData.departure_place_name" placeholder="请输入起运地" style="width: 220px"></Input>
+						</Col>
+						<Col span="8">
+							<label  class="label-control">目的地<span>*</span></label>
+							<Input v-model="insureData.destination_place_name" placeholder="请输入目的地" style="width: 220px"></Input>
+						</Col>
+					</Row>
+				</div>
+				<div  class="page-list">
+					<Row>
+						<Col span="24">
+							<label  class="label-control">货物类型<span>*</span></label>
+							<Radio-group>
+								<Radio label="公司">
+				
+								</Radio>
+								<Radio label="个人">
+					
+								</Radio>
+								<Radio label="个人">
+					
+								</Radio>
+							</Radio-group>
+						</Col>
+					</Row>
+				</div>
+				<div  class="page-list">
+					<Row>
+						<Col span="6">
+							<label  class="label-control">货物名称<span>*</span></label>
+							<Input v-model="insureData.goods_name" placeholder="请输入货物名称" style="width: 140px"></Input>
+						</Col>
+						<Col span="6">
+							<label  class="label-control">包装类型<span>*</span></label>
+							<Select v-model="insureData.pack_type"  style="width:120px">
+								<Option value="101">托盘包装</Option>
+								<Option value="201">捆包状包装</Option>
+								<Option value="301">袋状包装</Option>
+								<Option value="401">箱状包装</Option>
+								<Option value="501">桶状包装</Option>
+								<Option value="601">其他形状包装</Option>
+								<Option value="701">裸状包装</Option>
+							</Select>
+						</Col>
+						<Col span="6">
+							<label  class="label-control">件数<span>*</span></label>
+							<Input v-model="insureData.amount" placeholder="请输入件数" style="width: 140px"></Input>
+						</Col>
+						<Col span="6">
+							<label  class="label-control">货物价值<span>*</span></label>
+							<Input v-model="insureData.goods_value" placeholder="请输入货物价值" style="width: 140px"></Input>
+						</Col>
+					</Row>
+				</div>
+			</div>
+			<div class="page-section">
+				<p>车辆信息</p>
+				<div  class="page-list">
+					<Row>
+						<Col span="8">
+							起运日期
+							<label  class="label-control">陆运车辆车牌号<span>*</span></label>
+							<Input v-model="insureData.trans_no" placeholder="请输入货物价值" style="width: 140px"></Input>
+						</Col>
+						<Col span="16">
+							
+							<label  class="label-control">起运日期<span>*</span></label>
+							<Date-picker type="datetime" placeholder="选择日期和时间" style="width: 160px;display:inline-block" @on-change="dateChange"></Date-picker>
+						</Col>
+					</Row>
+				</div>
+			</div>
+			<div class="page-section" style="border-bottom:1px solid #ccc">
+				<div  class="page-list" style="padding-top:0">
+					<Checkbox v-model="insureData.einvoice">是否需要电子发票</Checkbox>
+				</div>
+				<div  class="page-list"  style="padding-top:5px">
+					<Checkbox value="true">我已阅读并同意《保险条款》请如实填写以上信息，并在核对无误后确认投保。</Checkbox>
+				</div>
+				<div class="mt20 text-center">
+					<Button type="primary" @click="insureSubmit('formValidate')">投保</Button>
+				</div>
+			</div>
+		</Form>
+	</div>
+</template>
+<script>
+
+import {URL} from '../../store/api';
+export default {
+	name: 'build',
+	data: function () {
+		return {
+			insureData:{
+                user_id:'',
+                order_id:'',
+                isProtocol:true,
+                product_type:'',
+                holder_name:'',
+                holder_type:100,
+                holder_link_name:'',
+                holder_tel:'',
+                insure_name:'',
+                insure_type:100,
+                einvoice:false,
+                goods_value:'',
+                goods_name:'',
+                pack_type:'',
+                amount:'',
+                trans_no:'',
+                expect_start_time:'',
+                departure_place:'',
+                destination_place:'',
+                departure_place_name:'',
+                destination_place_name:''
+            },
+			ruleValidate: {
+                mail: [
+                    { required: true, message: '邮箱不能为空', trigger: 'blur' },
+                    { type: 'email', message: '邮箱格式不正确', trigger: 'blur' }
+                ],
+                city: [
+                    { required: true, message: '请选择城市', trigger: 'change' }
+                ],
+                gender: [
+                    { required: true, message: '请选择性别', trigger: 'change' }
+                ],
+                interest: [
+                    { required: true, type: 'array', min: 1, message: '至少选择一个爱好', trigger: 'change' },
+                    { type: 'array', max: 2, message: '最多选择两个爱好', trigger: 'change' }
+                ],
+                date: [
+                    { required: true, type: 'date', message: '请选择日期', trigger: 'change' }
+                ],
+                time: [
+                    { required: true, type: 'date', message: '请选择时间', trigger: 'change' }
+                ],
+            }
+		}
+	},
+	methods:{
+		dateChange:function(e){	
+			var _vm = this;
+			_vm.insureData.expect_start_time = e;
+		},
+		insureSubmit:function(name){
+			var _vm = this;
+			_vm.$refs[name].validate((valid) => {
+				if (valid) {
+					_vm.insureData.einvoice=_vm.insureData.einvoice?"Y":"N";
+					httpServer.fetch({url:URL.ORDER_BUILD,data:_vm.insureData}).then(json=>{
+						if(json.result==1){
+							
+						}
+					})
+				} 
+			})
+			
+		}
+	}
+}
+
+</script>
+
